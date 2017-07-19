@@ -15,7 +15,7 @@ router.post('/approval', (req,res) => {
   knex('patients_drugs')
     .insert(req.body)
     .then(() => {
-      knex('patients_drugs').select().then((appv) => console.log(appv))
+      knex('patients_drugs').select().then((appv) => res.send(appv))
     })
 })
 
