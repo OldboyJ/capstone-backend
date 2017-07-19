@@ -8,6 +8,7 @@ var knex = require('./db/knex');
 
 var patients = require('./routes/patientRoutes');
 var detailed = require('./routes/detailsRoutes');
+var drugs = require('./routes/drugRoutes');
 
 var app = express();
 
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/patients', patients);
 app.use('/details', detailed);
+app.use('/drug', drugs);
 
 app.listen(port, function() {
 console.log("listening on port: ", port);

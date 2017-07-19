@@ -1,10 +1,10 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('patients_drugs', function(table) {
     table.string('PATIENTID');
-    table.integer('patientdrugid');
+    table.increments('patientdrugid').primary();
     table.integer('DRUGID');
     table.integer('DURATION');
-    table.integer('APPROVED');
+    table.integer('APPROVED').default(0);
     });
 };
 
