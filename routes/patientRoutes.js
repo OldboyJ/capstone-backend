@@ -9,6 +9,12 @@ router.get('/', function(req, res) {
   });
 });
 
+router.get('/all', function(req, res) {
+  knex('patient').select().then(function(patients) {
+    res.send(patients)
+  });
+});
+
 router.get('/:id/delete', (req, res) => {
   knex('patients_drugs').del().where('patientdrugid', req.params.id)
       .then(() => {

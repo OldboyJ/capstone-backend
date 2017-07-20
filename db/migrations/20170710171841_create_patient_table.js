@@ -1,3 +1,5 @@
+
+
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('patient', function(table) {
     table.string('PATIENTID');
