@@ -103,16 +103,6 @@ exports.seed = function(knex, Promise) {
         "DRUGID": 20,
         "DURATION": 30,
         "APPROVED": 0
-      }, {
-        "PATIENTID": "PIF-012345687",
-        "DRUGID": 14,
-        "DURATION": 7,
-        "APPROVED": -1
-      }, {
-        "PATIENTID": "PIF-78920384",
-        "DRUGID": 17,
-        "DURATION": 15,
-        "APPROVED": -1
       }
     ]);
   });

@@ -223,29 +223,7 @@ exports.seed = function(knex, Promise) {
         "OOPMAXTODATE": 3242,
         "OOPMET": -1,
         "PRIMARYPLANID": 20
-      }, {
-        "PATIENTID": "PIF-012345687",
-        "FIRSTNAME": "John",
-        "LASTNAME": "Doe",
-        "REFERRALSRC": "SOMEWHERE OVER THE VIAGRA FALLS",
-        "PRIMPLAN": "Unity Plan B",
-        "DEDMET": 0,
-        "DEDMEFORYEAR": 0,
-        "OOPMAXTODATE": 0,
-        "OOPMET": 0,
-        "PRIMARYPLANID": 8
-      }, {
-        "PATIENTID": "PIF-78920384",
-        "FIRSTNAME": "John",
-        "LASTNAME": "Smith",
-        "REFERRALSRC": "Dr. Jones",
-        "PRIMPLAN": "Delta Silver",
-        "DEDMET": -1,
-        "DEDMEFORYEAR": 1500,
-        "OOPMAXTODATE": 750,
-        "OOPMET": 0,
-        "PRIMARYPLANID": 8
       }
     ]);
   });
-};
+};  

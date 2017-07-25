@@ -23,11 +23,21 @@ router.get('/:id/delete', (req, res) => {
       })
 })
 
-router.post('/', function(req, res) {
-   knex('patient').insert(req.body).then(() => {
-     res.redirect('/patients');
-   })
+
+  router.post('/', function(req, res) {
+  knex('patient').select().then(function(patients) {
+    let idArr = [];
+    patients.map(function(patient) {
+      idArr.push(parseInt(patient.PATIENTID.slice(4)));
+    });
+    req.body.PATIENTID = "PIF-0" + (Math.max.apply(null, idArr) + 1);
+
+    knex('patient').insert(req.body).then(() => {
+      res.redirect('/patients');
+    })
+  });
 });
+
 
 
 module.exports = router;
